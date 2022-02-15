@@ -124,6 +124,7 @@ student *insertany(student *head)
             }
             else if (position == 0 && posptr == head)
             {
+
                 printf("insert before head node");
                 student *newstudent = createStudent(posptr);
                 student *laststudent = head;
@@ -133,6 +134,7 @@ student *insertany(student *head)
                     printf("last student address is %p and posptr is %p", laststudent, posptr);
                 }
                 head = newstudent;
+                laststudent->next = head;
             }
             else
             {
